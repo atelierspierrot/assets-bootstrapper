@@ -1,0 +1,39 @@
+{
+    "name": "atelierspierrot/assets-bootstrapper",
+    "type": "library-assets",
+    "description": "The Bootstrap & Font-Awesome libraries ready to use with the atelierspierrot/template-engine",
+    "keywords": [ "bootstrap", "font-awesome" ],
+    "homepage": "http://github.com/atelierspierrot/assets-bootstrapper",
+    "require": {
+        "atelierspierrot/assets-manager": "1.*",
+        "atelierspierrot/templatengine": "1.*"
+    },
+    "extra": {
+        "assets-dir": "www",
+        "assets-vendor-dir": "vendor",
+        "document-root": "demo",
+        "layouts": "www/layouts",
+        "views": "www/layouts",
+        "assets-presets": {
+            "jquery-cdn": {
+                "jsfiles_footer": "//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
+            },
+            "bootstrap": {
+                "css": "bootstrap/css/bootstrap.min.css",
+                "jsfiles_footer": "bootstrap/js/bootstrap.min.js",
+                "require": [ "jquery-cdn", "font-awesome" ]
+            },
+            "bootstrap-theme": {
+                "css": "last:bootstrap/css/bootstrap-theme.min.css",
+                "require": "bootstrap"
+            },
+            "font-awesome": {
+                "css": "font-awesome/css/font-awesome.min.css"
+            }
+        },
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "scripts": { "post-autoload-dump": "Assets\\Composer\\TemplateEngineInstaller::postAutoloadDump" }
+}
