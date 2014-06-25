@@ -1,7 +1,7 @@
 assets-bootstrapper
 ===================
 
-This package is a facility to use [jQuery](http://jquery.com/), [Bootstrap](http://getbootstrap.com/) and
+This package is a facility to use [Bootstrap](http://getbootstrap.com/) and
 [Font Awesome](http://fortawesome.github.io/Font-Awesome/) with the
 [Assets Manager](http://github.com/atelierspierrot/assets-manager) plugin
 for [Composer](http://getcomposer.org/).
