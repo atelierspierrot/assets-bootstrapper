@@ -2,7 +2,7 @@
     "name": "atelierspierrot/assets-bootstrapper",
     "type": "library-assets",
     "description": "The Bootstrap & Font-Awesome libraries ready to use with the atelierspierrot/assets-manager",
-    "keywords": [ "bootstrap", "font-awesome" ],
+    "keywords": [ "bootstrap", "font-awesome", "assets-manager" ],
     "homepage": "http://github.com/atelierspierrot/assets-bootstrapper",
     "require-dev": {
         "atelierspierrot/assets-manager": "1.*",
