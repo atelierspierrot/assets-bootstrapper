@@ -1,10 +1,10 @@
 {
     "name": "atelierspierrot/assets-bootstrapper",
     "type": "library-assets",
-    "description": "The Bootstrap & Font-Awesome libraries ready to use with the atelierspierrot/template-engine",
+    "description": "The Bootstrap & Font-Awesome libraries ready to use with the atelierspierrot/assets-manager",
     "keywords": [ "bootstrap", "font-awesome" ],
     "homepage": "http://github.com/atelierspierrot/assets-bootstrapper",
-    "require": {
+    "require-dev": {
         "atelierspierrot/assets-manager": "1.*",
         "atelierspierrot/templatengine": "1.*"
     },
@@ -15,20 +15,40 @@
         "layouts": "www/layouts",
         "views": "www/layouts",
         "assets-presets": {
+            "jquery": {
+                "jsfiles_footer": "min:jquery/jquery-last.min.js"
+            },
             "jquery-cdn": {
                 "jsfiles_footer": "//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
             },
             "bootstrap": {
-                "css": "bootstrap/css/bootstrap.min.css",
-                "jsfiles_footer": "bootstrap/js/bootstrap.min.js",
-                "require": [ "jquery-cdn", "font-awesome" ]
+                "css": "min:bootstrap/css/bootstrap.min.css",
+                "jsfiles_footer": "min:bootstrap/js/bootstrap.min.js",
+                "require": [ "jquery", "font-awesome" ]
+            },
+            "bootstrap-glyphicons": {
+                "css": "min:bootstrap/css/bootstrap-glyphicons.min.css",
+                "jsfiles_footer": "min:bootstrap/js/bootstrap.min.js",
+                "require": [ "jquery" ]
+            },
+            "bootstrap-cdn": {
+                "css": "min://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css",
+                "jsfiles_footer": "min://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js",
+                "require": [ "jquery" ]
             },
             "bootstrap-theme": {
                 "css": "last:bootstrap/css/bootstrap-theme.min.css",
                 "require": "bootstrap"
             },
+            "bootstrap-theme-cdn": {
+                "css": "last://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css",
+                "require": "bootstrap"
+            },
             "font-awesome": {
-                "css": "font-awesome/css/font-awesome.min.css"
+                "css": "min:font-awesome/css/font-awesome.min.css"
+            },
+            "font-awesome-cdn": {
+                "css": "min://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
             }
         },
         "branch-alias": {
