@@ -1,9 +1,10 @@
 assets-bootstrapper
 ===================
 
-This package is a facility to use [Bootstrap](http://getbootstrap.com/) and 
-[Font Awesome](http://fortawesome.github.io/Font-Awesome/) with our 
-[Template Engine](https://github.com/atelierspierrot/templatengine).
+This package is a facility to use [jQuery](http://jquery.com/), [Bootstrap](http://getbootstrap.com/) and
+[Font Awesome](http://fortawesome.github.io/Font-Awesome/) with the
+[Assets Manager](http://github.com/atelierspierrot/assets-manager) plugin
+for [Composer](http://getcomposer.org/).
 
 
 ## Usage
@@ -20,11 +21,24 @@ For more infos about "how to use" the libraries, please see:
 -   the [Assets Manager Composer plugin](https://github.com/atelierspierrot/assets-manager)
 -   the [Template Engine documentation](https://github.com/atelierspierrot/templatengine)
 
+This package defines the following "presets":
 
-## Libraries
+- `jquery` to embed the distributed version of the jQuery library
+- `jquery-cdn` to use the hosted version of jQuery by [googleapis.com](http://googleapis.com/)
+- `bootstrap` to embed the distributed version of the Bootstrap library ; note that the default version DOES NOT include the Glyphicons
+- `bootstrap-glyphicons` to embed the distributed version of the Bootstrap library INCLUDING the Glyphicons
+- `bootstrap-theme` to embed the distributed version of the Bootstrap's theme
+- `bootstrap-cdn` to use the hosted version of Bootstrap by [bootstrapcdn.com](http://netdna.bootstrapcdn.com/)
+- `font-awesome` to embed the distributed version of the Font Awesome font icons
+- `font-awesome-cdn` to use the hosted version of the Font Awesome font icons by [bootstrapcdn.com](http://netdna.bootstrapcdn.com/)
 
-This package embeds [Bootstrap](http://getbootstrap.com/) version 3.1.1. Bootstrap is 
-released under the MIT license and is copyright 2014 Twitter.
 
-This package also embeds [Font Awesome](http://fortawesome.github.io/Font-Awesome/) version 4.0.3.
-Font Awesome is released under the SIL OFL 1.1 license and is copyright Dave Gandy.
+## Third-parties
+
+This package embeds:
+
+- [jQuery](http://jquery.com/), released under the [MIT license](http://en.wikipedia.org/wiki/MIT_License) and copyright jQuery Foundation, Inc.
+- [Bootstrap](http://getbootstrap.com/), released under the [MIT license](http://en.wikipedia.org/wiki/MIT_License) and copyright Twitter.
+- [Font Awesome](http://fortawesome.github.io/Font-Awesome/), released under the [SIL OFL 1.1 license](http://scripts.sil.org/OFL) and copyright Dave Gandy.
+
+See the CHANGELOG of the package for versions of the third-parties embedded with each release.
