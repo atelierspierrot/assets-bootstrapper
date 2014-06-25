@@ -18,7 +18,7 @@ class Controller
 
     public function __construct()
     {
-        $this->loader = AssetsLoader::getInstance(__DIR__.'/..', 'www', __DIR__);
+        $this->loader = AssetsLoader::getInstance(__DIR__.'/..', 'www', __DIR__, AssetsLoader::PRESETS_NO_CONFLICT);
 /*
 echo '<pre>';
 var_export($loader);
