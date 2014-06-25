@@ -18,7 +18,7 @@ class Controller
 
     public function __construct()
     {
-        $this->loader = AssetsLoader::getInstance(__DIR__.'/..', 'www', __DIR__);
+        $this->loader = AssetsLoader::getInstance(__DIR__.'/..', 'www', __DIR__, AssetsLoader::PRESETS_NO_CONFLICT);
 /*
 echo '<pre>';
 var_export($loader);
@@ -84,7 +84,7 @@ exit('yo');
 
         $title_block = array(
             'title'=> isset($params['title']) ? $params['title'] : $title,
-            'subheader'=>isset($params['subheader']) ? $params['subheader'] : "The Bootstrap & Font-Awesome libraries ready to use with the atelierspierrot/template-engine",
+            'subheader'=>isset($params['subheader']) ? $params['subheader'] : "The Bootstrap & Font-Awesome libraries ready to use with the atelierspierrot/assets-manager",
             'slogan'=>isset($params['slogan']) ? $params['slogan'] : "<p>These pages show and demonstrate the use and functionality of the <a href=\"http://github.com/atelierspierrot/assets-bootstrapper\">atelierspierrot/assets-bootstrapper</a> PHP package you just downloaded.</p>"
         );
         $params['title'] = $title_block;
@@ -92,7 +92,6 @@ exit('yo');
         if (empty($params['menu'])) {
             $params['menu'] = array(
                 'Home'              => UrlHelper::url(array('page'=>'index')),
-                'Simple test'       => UrlHelper::url(array('page'=>'hello')),
                 'Theme'             => UrlHelper::url(array('page'=>'theme')),
                 'Typographic tests' => UrlHelper::url(array('page'=>'loremipsum')),
                 'Off canvas'        => UrlHelper::url(array('page'=>'offcanvas')),
@@ -115,35 +114,11 @@ exit('yo');
     function indexAction()
     {
         return array(
-            'content'   =>'YO',
+            'content'   =>'Hello, if you see colors and styles on screen, your assets are loaded ;)',
             'title'     =>'Home',
             'subheader' => '',
             'slogan'    => '',
         );        
-    }
-
-    function helloAction()
-    {
-        return array(
-            'output'=> $this->template_engine->render(
-                'hello.htm', array(
-                    'name'=>isset($_GET['name']) ? $_GET['name'] : 'Anonymous'
-                )
-            ),
-            'title' => "Hello",
-            'subheader' => '',
-            'slogan' => '',
-        );
-    }
-
-    function testAction()
-    {
-        return array(
-            'output'=> $this->template_engine->render(
-                'test_plugins.htm'
-            ),
-            'title' => "Test of all plugins"
-        );
     }
 
     function loremipsumAction()
