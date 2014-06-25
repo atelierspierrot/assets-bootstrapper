@@ -25,7 +25,7 @@ aside ol:last-child {
 if (empty($content)) $content = '<p>Test content</p>';
 
 if (!isset($public_sources)) $public_sources = true;
-$url_sources = "http://github.com/atelierspierrot/templatengine";
+$url_sources = "http://github.com/atelierspierrot/assets-bootstrapper";
 $host_sources_name = "GitHub";
 $host_sources_home = "http://github.com/";
 
