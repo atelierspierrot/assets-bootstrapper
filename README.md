@@ -1,10 +1,9 @@
 assets-bootstrapper
 ===================
 
-This package is a facility to use [jQuery](http://jquery.com/), [Bootstrap](http://getbootstrap.com/) and
-[Font Awesome](http://fortawesome.github.io/Font-Awesome/) with the
-[Assets Manager](http://github.com/atelierspierrot/assets-manager) plugin
-for [Composer](http://getcomposer.org/).
+This package is a facility to use [Bootstrap](http://getbootstrap.com/) and 
+[Font Awesome](http://fortawesome.github.io/Font-Awesome/) with our 
+[Template Engine](https://github.com/atelierspierrot/templatengine).
 
 
 ## Usage
@@ -22,19 +21,10 @@ For more infos about "how to use" the libraries, please see:
 -   the [Template Engine documentation](https://github.com/atelierspierrot/templatengine)
 
 
-This package defines the following "presets":
+## Libraries
 
-- `jquery-cdn` to use the hosted version of jQuery by [googleapis.com](http://googleapis.com/)
-- `bootstrap` to embed the distributed version of the Bootstrap library ; note that the default version DOES NOT include the Glyphicons
-- `bootstrap-theme` to embed the distributed version of the Bootstrap's theme
-- `font-awesome` to embed the distributed version of the Font Awesome font icons
+This package embeds [Bootstrap](http://getbootstrap.com/) version 3.1.1. Bootstrap is 
+released under the MIT license and is copyright 2014 Twitter.
 
-
-## Third-parties
-
-This package embeds:
-
-- [Bootstrap](http://getbootstrap.com/), released under the [MIT license](http://en.wikipedia.org/wiki/MIT_License) and copyright Twitter.
-- [Font Awesome](http://fortawesome.github.io/Font-Awesome/), released under the [SIL OFL 1.1 license](http://scripts.sil.org/OFL) and copyright Dave Gandy.
-
-See the CHANGELOG of the package for versions of the third-parties embedded with each release.
+This package also embeds [Font Awesome](http://fortawesome.github.io/Font-Awesome/) version 4.0.3.
+Font Awesome is released under the SIL OFL 1.1 license and is copyright Dave Gandy.
